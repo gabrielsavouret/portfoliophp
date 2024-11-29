@@ -21,14 +21,17 @@ require_once(__DIR__ . '/fonctions.php');
     <!-- Menu latéral -->
 <nav class="side-nav" id="side-nav">
     <ul class="links">
-        <li><a href="index.html"><strong>HOME</strong></a></li>
-        <li><a href="Projets.php"><strong>PROJETS</strong></a></li>
+        <li<a href="index.html"><strong>HOME</strong></a></li>
+        <li><a href="Projets.php?id=0"><strong>RH Connect</strong></a></li>
+        <li><a href="Projets.php?id=1"><strong>Client Connect</strong></a></li>
+        <li><a href="Projets.php?id=2"><strong>TradeHub</strong></a></li>
+        <li><a href="Projets.php?id=3"><strong>ProManage</strong></a></li>
+        <li><a href="Projets.php?id=4"><strong>Streamit</strong></a></li>
     </ul>
 </nav>
     <div class="projet">
-        <h1>PRESENTATION DES PROJETS</h1> <!-- Fermeture correcte de la balise h1 -->
+        <h1>PRESENTATION DES PROJETS</h1>
         <section class="presentation">
-        <?php # foreach($dataprojet as $projets): ?>
             <img class="image" src="<?= $dataprojet[$id]['image']; ?>" alt="image projet" style="max-width: 40%; height: auto;">
             <h2><?php echo $dataprojet[$id]['name']; ?></h2>
             <br>
@@ -46,7 +49,7 @@ require_once(__DIR__ . '/fonctions.php');
             <br>
             </section>
             <section class="description-groupe">
-            <h3>Compétences</h3> <!-- Fermeture correcte de la balise h3 -->
+            <h3>Compétences</h3>
             <ul>
                 <li><?php echo $dataprojet[$id]['comp_1']; ?></li>
                 <li><?php echo $dataprojet[$id]['comp_2']; ?></li>
@@ -54,7 +57,7 @@ require_once(__DIR__ . '/fonctions.php');
             <br>
             </section>
             <section class="description-groupe">
-            <h3>Logiciels</h3> <!-- Fermeture correcte de la balise h3 -->
+            <h3>Logiciels</h3>
             <ul>
                 <li><?php echo $dataprojet[$id]['logiciel_1']; ?></li>
                 <li><?php echo $dataprojet[$id]['logiciel_2']; ?></li>
@@ -63,8 +66,24 @@ require_once(__DIR__ . '/fonctions.php');
             </section>
         </section>
         <br>
-        <?php # endforeach; ?> <!-- Vous devez fermer la boucle PHP ici -->
     </div>
+    <footer>
+    <div class="footer-container">
+      <div class="contact">
+        <h3>Contact</h3>
+        <p><strong>Email :</strong> alex.martin@example.com</p>
+        <p><strong>Téléphone :</strong> +33 6 xx xx xx xx</p>
+      </div>
+      <div class="social">
+        <h3>Suivez-moi</h3>
+        <a href="https://github.com/Cypherpunk-7/PORTFOLIO" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Alex Martin. Tous droits réservés.</p>
+    </div>
+    </footer>
+
     <script src="JS/main.js"></script>
 </body>
 </html>
